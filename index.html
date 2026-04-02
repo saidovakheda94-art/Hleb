@@ -1,1156 +1,1213 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Асия — хлеб на закваске</title>
-<meta name="description" content="Премиальные курсы Асии по хлебу на закваске: Gluten Free и Левито Мадре." />
-
-<style>
-:root{
-  --bg: #ebe5da;
-  --bg-soft: #f4efe6;
-  --paper: rgba(255,255,255,0.72);
-  --paper-strong: rgba(255,255,255,0.86);
-
-  --text: #5d554a;
-  --muted: #8a8377;
-
-  --gold-1: #f3dfa2;
-  --gold-2: #d2ae63;
-  --gold-3: #a97d3e;
-  --gold-line: rgba(210,174,99,0.42);
-
-  --gold-gradient: linear-gradient(135deg, var(--gold-1) 0%, var(--gold-2) 52%, var(--gold-3) 100%);
-  --gold-gradient-soft: linear-gradient(135deg, rgba(243,223,162,.55) 0%, rgba(210,174,99,.38) 52%, rgba(169,125,62,.28) 100%);
-
-  --shadow-soft: 0 12px 28px rgba(71, 58, 40, 0.07);
-  --shadow: 0 22px 56px rgba(71, 58, 40, 0.10);
-  --shadow-deep: 0 34px 80px rgba(71, 58, 40, 0.14);
-
-  --radius-xl: 36px;
-  --radius-lg: 28px;
-  --radius-md: 22px;
-
-  --max: 1180px;
-}
-
-*{
-  box-sizing: border-box;
-}
-
-html{
-  scroll-behavior: smooth;
-}
-
-body{
-  margin: 0;
-  font-family: "Georgia", "Times New Roman", serif;
-  color: var(--text);
-  line-height: 1.65;
-  overflow-x: hidden;
-  background:
-    radial-gradient(circle at 0% 8%, rgba(210,174,99,.14), transparent 28%),
-    radial-gradient(circle at 100% 85%, rgba(210,174,99,.10), transparent 24%),
-    linear-gradient(180deg, #f3ede3 0%, #e8e1d4 100%);
-}
-
-body::before{
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-  opacity: .42;
-  background:
-    radial-gradient(circle at 15% 16%, rgba(243,223,162,.25) 0 2px, transparent 3px),
-    radial-gradient(circle at 84% 24%, rgba(210,174,99,.15) 0 2px, transparent 3px),
-    radial-gradient(circle at 28% 74%, rgba(243,223,162,.18) 0 2px, transparent 3px),
-    radial-gradient(circle at 76% 78%, rgba(210,174,99,.14) 0 2px, transparent 3px);
-  background-size: 300px 300px, 360px 360px, 320px 320px, 420px 420px;
-}
-
-img{
-  max-width: 100%;
-  display: block;
-}
-
-a{
-  color: inherit;
-  text-decoration: none;
-}
-
-.container{
-  width: min(92%, var(--max));
-  margin: 0 auto;
-}
-
-.topbar{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(248,244,238,0.56);
-  border-bottom: 1px solid rgba(210,174,99,.18);
-  box-shadow: 0 8px 24px rgba(71,58,40,.03);
-}
-
-.nav{
-  min-height: 84px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.brand-mark{
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  position: relative;
-  background: var(--gold-gradient);
-  box-shadow:
-    inset 0 1px 10px rgba(255,255,255,.45),
-    0 10px 24px rgba(169,125,62,.16);
-  flex-shrink: 0;
-}
-
-.brand-mark::before{
-  content: "";
-  position: absolute;
-  inset: 11px;
-  border-radius: 50%;
-  border: 1px solid rgba(255,255,255,.76);
-}
-
-.brand-mark::after{
-  content: "";
-  position: absolute;
-  top: 6px;
-  left: 9px;
-  width: 18px;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.35);
-  transform: rotate(-18deg);
-  filter: blur(1px);
-}
-
-.brand-text{
-  display: flex;
-  flex-direction: column;
-  line-height: 1.02;
-}
-
-.brand-text strong{
-  font-size: 24px;
-  font-weight: 700;
-  color: #665c50;
-}
-
-.brand-text span{
-  font-size: 12px;
-  color: var(--muted);
-  letter-spacing: .8px;
-  text-transform: uppercase;
-}
-
-.menu{
-  display: flex;
-  align-items: center;
-  gap: 26px;
-  flex-wrap: wrap;
-}
-
-.menu a{
-  font-size: 15px;
-  color: var(--muted);
-  transition: .2s ease;
-}
-
-.menu a:hover{
-  color: #7c6137;
-}
-
-.mobile-toggle{
-  display: none;
-}
-
-.btn{
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 15px 24px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  font: inherit;
-  font-size: 15px;
-  transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
-  overflow: hidden;
-}
-
-.btn:hover{
-  transform: translateY(-1px);
-}
-
-.btn::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.btn-primary{
-  color: #fff;
-  background: linear-gradient(135deg, #e8c978 0%, #c99f52 45%, #9f7337 100%);
-  border: 1px solid rgba(243,223,162,.44);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.35),
-    0 14px 28px rgba(169,125,62,.20);
-}
-
-.btn-primary::before{
-  background:
-    linear-gradient(120deg, rgba(255,255,255,.00) 25%, rgba(255,255,255,.28) 42%, rgba(255,255,255,.00) 58%);
-  transform: translateX(-120%);
-  transition: transform .8s ease;
-}
-
-.btn-primary:hover::before{
-  transform: translateX(120%);
-}
-
-.btn-secondary{
-  color: var(--text);
-  background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
-  border: 1px solid var(--gold-line);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.55),
-    var(--shadow-soft);
-}
-
-.hero{
-  position: relative;
-  padding: 78px 0 48px;
-}
-
-.hero-grid{
-  display: grid;
-  grid-template-columns: 1.02fr .98fr;
-  gap: 38px;
-  align-items: center;
-}
-
-.badge{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.68));
-  border: 1px solid rgba(210,174,99,.22);
-  color: #8d7b5e;
-  font-size: 14px;
-  margin-bottom: 18px;
-  box-shadow: var(--shadow-soft);
-}
-
-.hero h1{
-  margin: 0 0 18px;
-  font-size: clamp(38px, 5vw, 70px);
-  line-height: 1.03;
-  font-weight: 700;
-  color: #665c4f;
-}
-
-.hero-text{
-  font-size: 18px;
-  color: var(--muted);
-  max-width: 650px;
-  margin-bottom: 20px;
-}
-
-.hero-bullets{
-  margin: 0 0 28px;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 10px;
-  max-width: 420px;
-}
-
-.hero-bullets li{
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  font-size: 17px;
-  color: #6d6559;
-}
-
-.hero-dot{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold-gradient);
-  box-shadow: 0 4px 10px rgba(208,171,88,.18);
-  flex-shrink: 0;
-}
-
-.hero-actions{
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.hero-note{
-  max-width: 660px;
-  color: #7c756a;
-  font-size: 17px;
-}
-
-.hero-stats{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
-  gap: 14px;
-  margin-top: 28px;
-  max-width: 760px;
-}
-
-.stat{
-  position: relative;
-  padding: 18px;
-  border-radius: 24px;
-  background: linear-gradient(180deg, rgba(255,255,255,.68), rgba(255,255,255,.54));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(10px);
-}
-
-.stat::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,0));
-}
-
-.stat strong{
-  display: block;
-  margin-bottom: 4px;
-  font-size: 24px;
-  color: #8f6237;
-}
-
-.stat span{
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.hero-visual{
-  position: relative;
-}
-
-.hero-image-card{
-  position: relative;
-  border-radius: 42px;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,255,255,.56));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow-deep);
-  backdrop-filter: blur(12px);
-}
-
-.hero-image-card::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 2;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%),
-    radial-gradient(circle at 18% 12%, rgba(255,255,255,.30), transparent 18%),
-    linear-gradient(120deg, rgba(255,255,255,0) 18%, rgba(255,255,255,.16) 32%, rgba(255,255,255,0) 44%);
-}
-
-.hero-image-card::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  pointer-events: none;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.28);
-}
-
-.hero-image{
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  object-position: center;
-  background: #f0ece5;
-}
-
-.hero-card-caption{
-  position: relative;
-  z-index: 3;
-  padding: 16px 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.62));
-  border-top: 1px solid rgba(210,174,99,.16);
-  text-align: center;
-  font-size: 15px;
-  color: #766f64;
-  backdrop-filter: blur(10px);
-}
-
-section{
-  padding: 40px 0 18px;
-}
-
-.section-title{
-  max-width: 800px;
-  margin: 0 auto 30px;
-  text-align: center;
-}
-
-.section-title span{
-  display: inline-block;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.68));
-  border: 1px solid rgba(210,174,99,.18);
-  color: #8b7f67;
-  font-size: 13px;
-  margin-bottom: 12px;
-  box-shadow: var(--shadow-soft);
-}
-
-.section-title h2{
-  margin: 0 0 10px;
-  font-size: clamp(30px, 4vw, 46px);
-  line-height: 1.1;
-  color: #665d50;
-}
-
-.section-title p{
-  margin: 0;
-  font-size: 17px;
-  color: var(--muted);
-}
-
-.grid-2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-}
-
-.card{
-  position: relative;
-  padding: 30px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(180deg, rgba(255,255,255,.74), rgba(255,255,255,.58));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.card::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%),
-    radial-gradient(circle at 14% 14%, rgba(243,223,162,.18), transparent 16%);
-}
-
-.card h3{
-  margin: 0 0 12px;
-  font-size: 28px;
-  color: #675d50;
-}
-
-.card p{
-  margin: 0 0 14px;
-  color: var(--muted);
-}
-
-.list{
-  list-style: none;
-  margin: 18px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.list li{
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.list-dot{
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: var(--gold-gradient);
-  box-shadow: 0 6px 12px rgba(208,171,86,.16);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 700;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 2px;
-}
-
-.trust{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.trust-card{
-  position: relative;
-  padding: 24px;
-  border-radius: 26px;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.62));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.trust-card::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 28%);
-}
-
-.trust-card strong{
-  display: block;
-  margin-bottom: 8px;
-  font-size: 32px;
-  color: #8f6237;
-}
-
-.trust-card span{
-  color: var(--muted);
-  font-size: 15px;
-}
-
-.courses{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
-}
-
-.course{
-  position: relative;
-  overflow: hidden;
-  padding: 30px;
-  border-radius: 32px;
-  background: linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.66));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow);
-  backdrop-filter: blur(10px);
-}
-
-.course::before{
-  content: "";
-  position: absolute;
-  top: -30px;
-  right: -40px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(243,223,162,.20), rgba(243,223,162,0));
-  pointer-events: none;
-}
-
-.course::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%);
-}
-
-.course-tag{
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
-  padding: 7px 12px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.70));
-  border: 1px solid rgba(210,174,99,.18);
-  color: #8d7b5e;
-  font-size: 13px;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-soft);
-}
-
-.course h3{
-  position: relative;
-  z-index: 1;
-  margin: 0 0 10px;
-  font-size: 30px;
-  color: #675d50;
-}
-
-.course p{
-  position: relative;
-  z-index: 1;
-  margin: 0 0 16px;
-  color: var(--muted);
-}
-
-.course ul{
-  position: relative;
-  z-index: 1;
-  list-style: none;
-  margin: 18px 0 24px;
-  padding: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.course li{
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-  color: #70685d;
-}
-
-.course li::before{
-  content: "•";
-  color: #b68842;
-  font-size: 22px;
-  line-height: 1;
-  margin-top: -2px;
-}
-
-.course-footer{
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.course-note{
-  color: #8b857a;
-  font-size: 14px;
-}
-
-.result-box{
-  position: relative;
-  padding: 34px;
-  border-radius: 34px;
-  background:
-    linear-gradient(135deg, rgba(243,223,162,.16), rgba(210,174,99,.10)),
-    linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.62));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow);
-  text-align: center;
-  backdrop-filter: blur(10px);
-  overflow: hidden;
-}
-
-.result-box::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%);
-}
-
-.result-box p{
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  font-size: clamp(21px, 2vw, 30px);
-  color: #6c6458;
-  line-height: 1.45;
-}
-
-.faq{
-  display: grid;
-  gap: 14px;
-  max-width: 920px;
-  margin: 0 auto;
-}
-
-details{
-  padding: 18px 20px;
-  border-radius: 22px;
-  background: linear-gradient(180deg, rgba(255,255,255,.78), rgba(255,255,255,.62));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(10px);
-}
-
-summary{
-  cursor: pointer;
-  list-style: none;
-  font-weight: 700;
-  color: #675d50;
-}
-
-summary::-webkit-details-marker{
-  display: none;
-}
-
-details p{
-  margin: 12px 0 0;
-  color: var(--muted);
-}
-
-.cta{
-  text-align: center;
-  padding-bottom: 24px;
-}
-
-.cta-box{
-  position: relative;
-  max-width: 920px;
-  margin: 0 auto;
-  padding: 38px 28px;
-  border-radius: 36px;
-  background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.68));
-  border: 1px solid var(--gold-line);
-  box-shadow: var(--shadow-deep);
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-}
-
-.cta-box::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,0) 26%),
-    radial-gradient(circle at 15% 18%, rgba(243,223,162,.18), transparent 16%);
-}
-
-.cta-box h2{
-  position: relative;
-  z-index: 1;
-  margin: 0 0 12px;
-  font-size: clamp(30px, 4vw, 48px);
-  color: #665d50;
-}
-
-.cta-box p{
-  position: relative;
-  z-index: 1;
-  margin: 0 auto 22px;
-  max-width: 700px;
-  color: var(--muted);
-  font-size: 17px;
-}
-
-.cta-actions{
-  position: relative;
-  z-index: 1;
-  display: flex;
-  gap: 14px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-footer{
-  margin-top: 36px;
-  padding: 28px 0 40px;
-  border-top: 1px solid rgba(210,174,99,.16);
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.footer-row{
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 980px){
-  .hero-grid,
-  .grid-2,
-  .courses,
-  .trust{
-    grid-template-columns: 1fr;
-  }
-
-  .hero-stats{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 760px){
-  .nav{
-    align-items: flex-start;
-    padding: 14px 0;
-  }
-
-  .nav-right{
-    width: 100%;
-  }
-
-  .mobile-toggle{
-    display: inline-flex;
-    background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
-    border: 1px solid var(--gold-line);
-    border-radius: 14px;
-    padding: 10px 14px;
-    color: var(--text);
-    font-weight: 700;
-    cursor: pointer;
-    box-shadow: var(--shadow-soft);
-  }
-
-  .menu-wrap{
-    display: none;
-    width: 100%;
-    padding-top: 14px;
-  }
-
-  .menu-wrap.open{
-    display: block;
-  }
-
-  .menu{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-
-  .hero{
-    padding-top: 42px;
-  }
-
-  .hero h1{
-    font-size: 40px;
-  }
-
-  .hero-text,
-  .hero-note{
-    font-size: 16px;
-  }
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Асия — хлеб на закваске</title>
+  <meta name="description" content="Премиальные курсы Асии по хлебу на закваске: Gluten Free и Левито Мадре." />
+
+  <style>
+    :root{
+      --bg: #e9e2d6;
+      --bg-soft: #f3ede3;
+      --paper: rgba(255,255,255,0.78);
+      --paper-strong: rgba(255,255,255,0.88);
+
+      --text: #5d554a;
+      --muted: #8a8377;
+
+      --gold-1: #f3dfa2;
+      --gold-2: #d2ae63;
+      --gold-3: #a97d3e;
+      --gold-line: rgba(210,174,99,0.42);
+
+      --gold-gradient: linear-gradient(135deg, var(--gold-1) 0%, var(--gold-2) 52%, var(--gold-3) 100%);
+
+      --shadow-soft: 0 12px 28px rgba(71, 58, 40, 0.07);
+      --shadow: 0 22px 56px rgba(71, 58, 40, 0.10);
+      --shadow-deep: 0 34px 80px rgba(71, 58, 40, 0.14);
+
+      --radius-xl: 36px;
+      --radius-lg: 28px;
+      --radius-md: 22px;
+
+      --max: 1180px;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+    body{
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      color: var(--text);
+      line-height: 1.65;
+      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 0% 8%, rgba(210,174,99,.10), transparent 26%),
+        radial-gradient(circle at 100% 85%, rgba(210,174,99,.08), transparent 22%),
+        linear-gradient(180deg, #f2ece2 0%, #e8e1d4 100%);
+    }
+
+    body::before{
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      opacity: .35;
+      background:
+        radial-gradient(circle at 15% 16%, rgba(243,223,162,.25) 0 2px, transparent 3px),
+        radial-gradient(circle at 84% 24%, rgba(210,174,99,.15) 0 2px, transparent 3px),
+        radial-gradient(circle at 28% 74%, rgba(243,223,162,.18) 0 2px, transparent 3px),
+        radial-gradient(circle at 76% 78%, rgba(210,174,99,.14) 0 2px, transparent 3px);
+      background-size: 300px 300px, 360px 360px, 320px 320px, 420px 420px;
+    }
+
+    img{
+      max-width: 100%;
+      display: block;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container{
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar{
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+      backdrop-filter: blur(16px);
+      background: rgba(248,244,238,0.50);
+      border-bottom: 1px solid rgba(210,174,99,.18);
+      box-shadow: 0 8px 24px rgba(71,58,40,.03);
+    }
+
+    .nav{
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-mark{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: relative;
+      background: var(--gold-gradient);
+      box-shadow:
+        inset 0 1px 10px rgba(255,255,255,.45),
+        0 10px 24px rgba(169,125,62,.16);
+      flex-shrink: 0;
+    }
+
+    .brand-mark::before{
+      content: "";
+      position: absolute;
+      inset: 11px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.76);
+    }
+
+    .brand-mark::after{
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 9px;
+      width: 18px;
+      height: 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.35);
+      transform: rotate(-18deg);
+      filter: blur(1px);
+    }
+
+    .brand-text{
+      display: flex;
+      flex-direction: column;
+      line-height: 1.02;
+    }
+
+    .brand-text strong{
+      font-size: 24px;
+      font-weight: 700;
+      color: #665c50;
+    }
+
+    .brand-text span{
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .nav-right{
+      display: flex;
+      align-items: center;
+    }
+
+    .menu{
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      flex-wrap: wrap;
+    }
+
+    .menu a{
+      font-size: 15px;
+      color: #6d6559;
+      transition: .2s ease;
+    }
+
+    .menu a:hover{
+      color: #7c6137;
+    }
+
+    .mobile-toggle{
+      display: none;
+    }
+
+    .btn{
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 15px 24px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font: inherit;
+      font-size: 16px;
+      transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+      overflow: hidden;
+    }
+
+    .btn:hover{
+      transform: translateY(-1px);
+    }
+
+    .btn::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    .btn-primary{
+      color: #fff;
+      background: linear-gradient(135deg, #e8c978 0%, #c99f52 45%, #9f7337 100%);
+      border: 1px solid rgba(243,223,162,.44);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.35),
+        0 14px 28px rgba(169,125,62,.20);
+    }
+
+    .btn-primary::before{
+      background:
+        linear-gradient(120deg, rgba(255,255,255,.00) 25%, rgba(255,255,255,.28) 42%, rgba(255,255,255,.00) 58%);
+      transform: translateX(-120%);
+      transition: transform .8s ease;
+    }
+
+    .btn-primary:hover::before{
+      transform: translateX(120%);
+    }
+
+    .btn-secondary{
+      color: var(--text);
+      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
+      border: 1px solid var(--gold-line);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.55),
+        var(--shadow-soft);
+    }
+
+    /* HERO FULL SCREEN */
+    .hero{
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      overflow: hidden;
+      padding-top: 110px;
+      padding-bottom: 50px;
+    }
+
+    .hero::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("79E1F695-CF37-49DB-9FE7-D6BB04BD34FC.png") center center / cover no-repeat;
+      z-index: -3;
+    }
+
+    .hero::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(35,25,15,.68) 0%, rgba(35,25,15,.48) 38%, rgba(35,25,15,.22) 68%, rgba(35,25,15,.18) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.28) 100%);
+      z-index: -2;
+    }
+
+    .hero-overlay-light{
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 18% 24%, rgba(255,255,255,.10), transparent 24%),
+        linear-gradient(120deg, rgba(255,255,255,0) 20%, rgba(255,255,255,.08) 34%, rgba(255,255,255,0) 46%);
+    }
+
+    .hero-content{
+      max-width: 760px;
+      padding: 30px 0;
+    }
+
+    .hero-badge{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 16px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.22), rgba(255,255,255,.12));
+      border: 1px solid rgba(243,223,162,.35);
+      color: #f5ead0;
+      font-size: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1{
+      margin: 0 0 20px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.02;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0 10px 28px rgba(0,0,0,.20);
+      max-width: 860px;
+    }
+
+    .hero-text{
+      font-size: 22px;
+      color: rgba(255,255,255,.90);
+      max-width: 700px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      text-shadow: 0 8px 20px rgba(0,0,0,.16);
+    }
+
+    .hero-bullets{
+      margin: 0 0 30px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+      max-width: 460px;
+    }
+
+    .hero-bullets li{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 21px;
+      color: rgba(255,255,255,.95);
+      text-shadow: 0 8px 20px rgba(0,0,0,.14);
+    }
+
+    .hero-dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      box-shadow: 0 4px 12px rgba(208,171,88,.22);
+      flex-shrink: 0;
+    }
+
+    .hero-note{
+      max-width: 760px;
+      color: rgba(255,255,255,.88);
+      font-size: 21px;
+      line-height: 1.65;
+      text-shadow: 0 8px 20px rgba(0,0,0,.16);
+      margin-bottom: 32px;
+    }
+
+    .hero-actions{
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .hero-stats{
+      display: grid;
+      grid-template-columns: repeat(3, minmax(170px, 1fr));
+      gap: 16px;
+      max-width: 860px;
+    }
+
+    .stat{
+      position: relative;
+      padding: 18px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,.10));
+      border: 1px solid rgba(243,223,162,.26);
+      box-shadow: 0 16px 34px rgba(0,0,0,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .stat::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+    }
+
+    .stat strong{
+      display: block;
+      margin-bottom: 6px;
+      font-size: 28px;
+      color: #fff3cf;
+    }
+
+    .stat span{
+      font-size: 15px;
+      color: rgba(255,255,255,.88);
+      line-height: 1.5;
+    }
+
+    section{
+      padding: 44px 0 20px;
+    }
+
+    .section-title{
+      max-width: 850px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+
+    .section-title span{
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.70));
+      border: 1px solid rgba(210,174,99,.20);
+      color: #7a6a52;
+      font-size: 15px;
+      letter-spacing: .3px;
+      margin-bottom: 14px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-title h2{
+      margin: 0 0 14px;
+      font-size: clamp(36px, 4.8vw, 58px);
+      line-height: 1.08;
+      color: #665d50;
+    }
+
+    .section-title p{
+      margin: 0;
+      font-size: 20px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .grid-2{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .card{
+      position: relative;
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.66));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .card::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%),
+        radial-gradient(circle at 14% 14%, rgba(243,223,162,.16), transparent 16%);
+    }
+
+    .card h3{
+      margin: 0 0 14px;
+      font-size: 32px;
+      line-height: 1.2;
+      color: #675d50;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card p{
+      margin: 0 0 16px;
+      color: var(--muted);
+      font-size: 19px;
+      line-height: 1.75;
+      position: relative;
+      z-index: 1;
+    }
+
+    .list{
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .list li{
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #70685d;
+    }
+
+    .list-dot{
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--gold-gradient);
+      box-shadow: 0 6px 12px rgba(208,171,86,.16);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .trust{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .trust-card{
+      position: relative;
+      padding: 28px;
+      border-radius: 26px;
+      background: linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.66));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .trust-card::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 28%);
+    }
+
+    .trust-card strong{
+      display: block;
+      margin-bottom: 8px;
+      font-size: 36px;
+      color: #8f6237;
+      position: relative;
+      z-index: 1;
+    }
+
+    .trust-card span{
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      position: relative;
+      z-index: 1;
+    }
+
+    .courses{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .course{
+      position: relative;
+      overflow: hidden;
+      padding: 32px;
+      border-radius: 32px;
+      background: linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.70));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+    }
+
+    .course::before{
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(243,223,162,.20), rgba(243,223,162,0));
+      pointer-events: none;
+    }
+
+    .course::after{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%);
+    }
+
+    .course-tag{
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.74));
+      border: 1px solid rgba(210,174,99,.18);
+      color: #7a6a52;
+      font-size: 15px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .course h3{
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      font-size: 36px;
+      line-height: 1.15;
+      color: #675d50;
+    }
+
+    .course p{
+      position: relative;
+      z-index: 1;
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.75;
+    }
+
+    .course ul{
+      position: relative;
+      z-index: 1;
+      list-style: none;
+      margin: 18px 0 24px;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .course li{
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #70685d;
+      font-size: 18px;
+      line-height: 1.65;
+    }
+
+    .course li::before{
+      content: "•";
+      color: #b68842;
+      font-size: 24px;
+      line-height: 1;
+      margin-top: -1px;
+    }
+
+    .course-footer{
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .course-note{
+      color: #8b857a;
+      font-size: 15px;
+    }
+
+    .result-box{
+      position: relative;
+      padding: 38px;
+      border-radius: 34px;
+      background:
+        linear-gradient(135deg, rgba(243,223,162,.16), rgba(210,174,99,.10)),
+        linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.66));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow);
+      text-align: center;
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+
+    .result-box::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,.18), rgba(255,255,255,0) 24%);
+    }
+
+    .result-box p{
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: clamp(24px, 2.2vw, 34px);
+      color: #6c6458;
+      line-height: 1.5;
+    }
+
+    .faq{
+      display: grid;
+      gap: 14px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    details{
+      padding: 20px 22px;
+      border-radius: 22px;
+      background: linear-gradient(180deg, rgba(255,255,255,.80), rgba(255,255,255,.66));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(10px);
+    }
+
+    summary{
+      cursor: pointer;
+      list-style: none;
+      font-weight: 700;
+      color: #675d50;
+      font-size: 21px;
+      line-height: 1.5;
+    }
+
+    summary::-webkit-details-marker{
+      display: none;
+    }
+
+    details p{
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .cta{
+      text-align: center;
+      padding-bottom: 24px;
+    }
+
+    .cta-box{
+      position: relative;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 42px 30px;
+      border-radius: 36px;
+      background: linear-gradient(180deg, rgba(255,255,255,.86), rgba(255,255,255,.72));
+      border: 1px solid var(--gold-line);
+      box-shadow: var(--shadow-deep);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    .cta-box::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.20), rgba(255,255,255,0) 26%),
+        radial-gradient(circle at 15% 18%, rgba(243,223,162,.18), transparent 16%);
+    }
+
+    .cta-box h2{
+      position: relative;
+      z-index: 1;
+      margin: 0 0 12px;
+      font-size: clamp(34px, 4vw, 52px);
+      color: #665d50;
+      line-height: 1.12;
+    }
+
+    .cta-box p{
+      position: relative;
+      z-index: 1;
+      margin: 0 auto 24px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    .cta-actions{
+      position: relative;
+      z-index: 1;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer{
+      margin-top: 36px;
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(210,174,99,.16);
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .footer-row{
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 980px){
+      .grid-2,
+      .courses,
+      .trust{
+        grid-template-columns: 1fr;
+      }
+
+      .hero-stats{
+        grid-template-columns: 1fr;
+        max-width: 540px;
+      }
+
+      .hero-content{
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 760px){
+      .nav{
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .nav-right{
+        width: 100%;
+        display: block;
+      }
+
+      .mobile-toggle{
+        display: inline-flex;
+        background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.72));
+        border: 1px solid var(--gold-line);
+        border-radius: 14px;
+        padding: 10px 14px;
+        color: var(--text);
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: var(--shadow-soft);
+      }
+
+      .menu-wrap{
+        display: none;
+        width: 100%;
+        padding-top: 14px;
+      }
+
+      .menu-wrap.open{
+        display: block;
+      }
+
+      .menu{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+      }
+
+      .hero{
+        min-height: auto;
+        padding-top: 118px;
+        padding-bottom: 38px;
+      }
+
+      .hero h1{
+        font-size: 44px;
+      }
+
+      .hero-text{
+        font-size: 19px;
+      }
+
+      .hero-bullets li{
+        font-size: 19px;
+      }
+
+      .hero-note{
+        font-size: 18px;
+      }
+
+      .section-title h2{
+        font-size: 40px;
+      }
+
+      .section-title p{
+        font-size: 18px;
+      }
+
+      .card h3{
+        font-size: 28px;
+      }
+
+      .card p,
+      .course p,
+      .course li,
+      .trust-card span,
+      details p,
+      .cta-box p{
+        font-size: 17px;
+      }
+
+      .course h3{
+        font-size: 30px;
+      }
+
+      summary{
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<header class="topbar">
-  <div class="container nav">
-    <a href="#" class="brand">
-      <span class="brand-mark"></span>
-      <span class="brand-text">
-        <strong>Асия</strong>
-        <span>хлеб на закваске</span>
-      </span>
-    </a>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#" class="brand">
+        <span class="brand-mark"></span>
+        <span class="brand-text">
+          <strong>Асия</strong>
+          <span>хлеб на закваске</span>
+        </span>
+      </a>
 
-    <div class="nav-right">
-      <button class="mobile-toggle" id="mobileToggle">Меню</button>
-      <div class="menu-wrap" id="menuWrap">
-        <nav class="menu">
-          <a href="#about">Обо мне</a>
-          <a href="#why">Почему я</a>
-          <a href="#courses">Курсы</a>
-          <a href="#faq">Вопросы</a>
-          <a href="#contact">Записаться</a>
-        </nav>
+      <div class="nav-right">
+        <button class="mobile-toggle" id="mobileToggle">Меню</button>
+        <div class="menu-wrap" id="menuWrap">
+          <nav class="menu">
+            <a href="#about">Обо мне</a>
+            <a href="#why">Почему я</a>
+            <a href="#courses">Курсы</a>
+            <a href="#faq">Вопросы</a>
+            <a href="#contact">Записаться</a>
+          </nav>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
+  <main>
 
-  <section class="hero" id="top">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge">Полезный хлеб • закваска • премиальная подача</div>
+    <section class="hero" id="top">
+      <div class="hero-overlay-light"></div>
 
-        <h1>
-          Забудьте о скучных рецептах.<br>
-          Пора научиться печь хлеб,<br>
-          который меняет всё.
-        </h1>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">Полезный хлеб • закваска • премиальная подача</div>
 
-        <div class="hero-text">
-          Закваска — ваш секретный ингредиент. С её дикими дрожжами и молочно-кислыми бактериями
-          каждый хлеб становится настоящим произведением искусства.
+          <h1>
+            Забудьте о скучных рецептах.<br>
+            Пора научиться печь хлеб,<br>
+            который меняет всё.
+          </h1>
+
+          <div class="hero-text">
+            Закваска — ваш секретный ингредиент. С её дикими дрожжами и молочно-кислыми бактериями
+            каждый хлеб становится настоящим произведением искусства.
+          </div>
+
+          <ul class="hero-bullets">
+            <li><span class="hero-dot"></span><span>хрустящая корочка</span></li>
+            <li><span class="hero-dot"></span><span>воздушный мякиш</span></li>
+            <li><span class="hero-dot"></span><span>глубокий, неповторимый вкус</span></li>
+          </ul>
+
+          <div class="hero-note">
+            Каждый хлеб — это не просто еда. Это момент тепла и заботы о ваших близких.
+            Давайте вместе приготовим что-то по-настоящему особенное.
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20записаться%20на%20курс%20по%20хлебу." target="_blank" rel="noopener noreferrer">
+              Записаться в WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#courses">
+              Посмотреть курсы
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>450+</strong>
+              <span>женщин уже прошли путь от закваски до идеального хлеба</span>
+            </div>
+            <div class="stat">
+              <strong>2 курса</strong>
+              <span>для разных целей и разных форматов выпечки</span>
+            </div>
+            <div class="stat">
+              <strong>Дом + доход</strong>
+              <span>многие ученицы перестали покупать хлеб и начали зарабатывать</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-title">
+          <span>Обо мне</span>
+          <h2>Я не просто обучаю рецептам — я провожу вас к результату</h2>
+          <p>
+            Полезный, красивый и по-настоящему вкусный хлеб может стать частью вашей повседневной жизни.
+          </p>
         </div>
 
-        <ul class="hero-bullets">
-          <li><span class="hero-dot"></span><span>хрустящая корочка</span></li>
-          <li><span class="hero-dot"></span><span>воздушный мякиш</span></li>
-          <li><span class="hero-dot"></span><span>глубокий, неповторимый вкус</span></li>
-        </ul>
+        <div class="grid-2">
+          <div class="card">
+            <h3>Меня зовут Асия</h3>
+            <p>
+              Я кондитер, домашний пекарь и многодетная мама. И я понимаю, как важно,
+              чтобы на столе каждый день была полезная еда.
+            </p>
+            <p>
+              Для меня хлеб — это не просто выпечка. Это забота о семье, уют дома,
+              спокойствие и уверенность в том, что вы даёте близким лучшее.
+            </p>
+          </div>
 
-        <div class="hero-note">
-          Каждый хлеб — это не просто еда. Это момент тепла и заботы о ваших близких.
-          Давайте вместе приготовим что-то по-настоящему особенное.
+          <div class="card">
+            <h3>Что вы получите</h3>
+            <ul class="list">
+              <li><span class="list-dot">1</span><span>Понятную систему без хаоса и бесконечных проб</span></li>
+              <li><span class="list-dot">2</span><span>Хлеб, который хочется печь снова и снова</span></li>
+              <li><span class="list-dot">3</span><span>Навык для семьи, удовольствия и, при желании, заработка</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="container">
+        <div class="section-title">
+          <span>Почему именно со мной</span>
+          <h2>Потому что я веду не к красивой теории, а к реальному хлебу на вашем столе</h2>
+          <p>
+            Мой подход — мягкий, понятный и ориентированный на обычную женщину, у которой есть семья, дела и жизнь.
+          </p>
         </div>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20записаться%20на%20курс%20по%20хлебу." target="_blank" rel="noopener noreferrer">
-            Записаться в WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="#courses">
-            Посмотреть курсы
-          </a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
+        <div class="trust">
+          <div class="trust-card">
             <strong>450+</strong>
-            <span>женщин уже прошли путь от закваски до идеального хлеба</span>
+            <span>обычных домохозяек уже прошли путь со мной</span>
           </div>
-          <div class="stat">
-            <strong>2 курса</strong>
-            <span>для разных целей и разных форматов выпечки</span>
+          <div class="trust-card">
+            <strong>С нуля</strong>
+            <span>многие начинали без опыта, страха и понимания закваски</span>
           </div>
-          <div class="stat">
-            <strong>Дом + доход</strong>
-            <span>многие ученицы перестали покупать хлеб и начали зарабатывать</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="hero-visual">
-        <div class="hero-image-card">
-          <img src="79E1F695-CF37-49DB-9FE7-D6BB04BD34FC.png" alt="Асия с хлебом" class="hero-image">
-
-          <div class="hero-card-caption">
-            Меня зовут <strong>Асия</strong>, и я стану вашим путеводителем в мир вкусной и полезной выпечки.
+          <div class="trust-card">
+            <strong>Результат</strong>
+            <span>часть учениц перестала покупать выпечку и начала зарабатывать</span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <div class="section-title">
-        <span>Обо мне</span>
-        <h2>Я не просто обучаю рецептам — я провожу вас к результату</h2>
-        <p>
-          Полезный, красивый и по-настоящему вкусный хлеб может стать частью вашей повседневной жизни.
-        </p>
-      </div>
-
-      <div class="grid-2">
-        <div class="card">
-          <h3>Меня зовут Асия</h3>
+    <section id="courses">
+      <div class="container">
+        <div class="section-title">
+          <span>Курсы</span>
+          <h2>Выберите направление, которое подходит именно вам</h2>
           <p>
-            Я кондитер, домашний пекарь и многодетная мама. И я понимаю, как важно,
-            чтобы на столе каждый день была полезная еда.
-          </p>
-          <p>
-            Для меня хлеб — это не просто выпечка. Это забота о семье, уют дома,
-            спокойствие и уверенность в том, что вы даёте близким лучшее.
+            Два пути — два формата результата. Оба ведут к красивой и полезной выпечке.
           </p>
         </div>
 
-        <div class="card">
-          <h3>Что вы получите</h3>
-          <ul class="list">
-            <li><span class="list-dot">1</span><span>Понятную систему без хаоса и бесконечных проб</span></li>
-            <li><span class="list-dot">2</span><span>Хлеб, который хочется печь снова и снова</span></li>
-            <li><span class="list-dot">3</span><span>Навык для семьи, удовольствия и, при желании, заработка</span></li>
-          </ul>
+        <div class="courses">
+          <article class="course">
+            <div class="course-tag">Для особого питания</div>
+            <h3>Курс «Gluten Free»</h3>
+            <p>
+              Подойдёт тем, кто хочет освоить безглютеновую выпечку без потери вкуса,
+              текстуры и эстетики хлеба.
+            </p>
+            <ul>
+              <li>понятный путь к безглютеновому хлебу</li>
+              <li>вкусная и красивая выпечка без ощущения ограничений</li>
+              <li>мягкая подача материала для начинающих</li>
+            </ul>
+            <div class="course-footer">
+              <span class="course-note">Запись через WhatsApp</span>
+              <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Gluten%20Free." target="_blank" rel="noopener noreferrer">
+                Хочу Gluten Free
+              </a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course-tag">Для ценителей итальянской закваски</div>
+            <h3>Курс «Левито Мадре»</h3>
+            <p>
+              Подойдёт тем, кто хочет работать с мягкой итальянской закваской
+              и получать особенно красивый, деликатный хлеб.
+            </p>
+            <ul>
+              <li>понимание работы с Левито Мадре</li>
+              <li>мягкий, ароматный и эстетичный результат</li>
+              <li>уверенность в процессе и повторяемость результата</li>
+            </ul>
+            <div class="course-footer">
+              <span class="course-note">Запись через WhatsApp</span>
+              <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Левито%20Мадре." target="_blank" rel="noopener noreferrer">
+                Хочу Левито Мадре
+              </a>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="why">
-    <div class="container">
-      <div class="section-title">
-        <span>Почему именно со мной</span>
-        <h2>Потому что я веду не к красивой теории, а к реальному хлебу на вашем столе</h2>
-        <p>
-          Мой подход — мягкий, понятный и ориентированный на обычную женщину, у которой есть семья, дела и жизнь.
-        </p>
-      </div>
-
-      <div class="trust">
-        <div class="trust-card">
-          <strong>450+</strong>
-          <span>обычных домохозяек уже прошли путь со мной</span>
-        </div>
-        <div class="trust-card">
-          <strong>С нуля</strong>
-          <span>многие начинали без опыта, страха и понимания закваски</span>
-        </div>
-        <div class="trust-card">
-          <strong>Результат</strong>
-          <span>часть учениц перестала покупать выпечку и начала зарабатывать</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="courses">
-    <div class="container">
-      <div class="section-title">
-        <span>Курсы</span>
-        <h2>Выберите направление, которое подходит именно вам</h2>
-        <p>
-          Два пути — два формата результата. Оба ведут к красивой и полезной выпечке.
-        </p>
-      </div>
-
-      <div class="courses">
-        <article class="course">
-          <div class="course-tag">Для особого питания</div>
-          <h3>Курс «Gluten Free»</h3>
+    <section>
+      <div class="container">
+        <div class="result-box">
           <p>
-            Подойдёт тем, кто хочет освоить безглютеновую выпечку без потери вкуса,
-            текстуры и эстетики хлеба.
+            Со мной вы приходите не просто к рецептам, а к состоянию,
+            в котором хлеб дома становится нормой: красивый, полезный,
+            ароматный и сделанный вашими руками.
           </p>
-          <ul>
-            <li>понятный путь к безглютеновому хлебу</li>
-            <li>вкусная и красивая выпечка без ощущения ограничений</li>
-            <li>мягкая подача материала для начинающих</li>
-          </ul>
-          <div class="course-footer">
-            <span class="course-note">Запись через WhatsApp</span>
-            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Gluten%20Free." target="_blank" rel="noopener noreferrer">
-              Хочу Gluten Free
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
+        <div class="section-title">
+          <span>Вопросы</span>
+          <h2>Что чаще всего спрашивают</h2>
+        </div>
+
+        <div class="faq">
+          <details>
+            <summary>Я новичок. У меня получится?</summary>
+            <p>
+              Да. Курсы подойдут и тем, кто только начинает. Материал строится так,
+              чтобы вы не тонули в сложностях, а шли шаг за шагом к понятному результату.
+            </p>
+          </details>
+
+          <details>
+            <summary>Подходит ли это для дома, если у меня семья и мало времени?</summary>
+            <p>
+              Да. Именно поэтому мой подход удобен для обычной жизни. Он не про идеальные лабораторные условия,
+              а про реальный хлеб дома.
+            </p>
+          </details>
+
+          <details>
+            <summary>Можно ли потом зарабатывать на выпечке?</summary>
+            <p>
+              Да, многие ученицы пришли не только к домашнему хлебу, но и к хлебному ремеслу как к источнику дохода.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Готовы начать свой путь?</h2>
+          <p>
+            Напишите мне в WhatsApp, и я помогу выбрать курс, который подойдёт именно вам.
+          </p>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20подобрать%20подходящий%20курс." target="_blank" rel="noopener noreferrer">
+              Написать в WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#top">
+              Наверх
             </a>
           </div>
-        </article>
-
-        <article class="course">
-          <div class="course-tag">Для ценителей итальянской закваски</div>
-          <h3>Курс «Левито Мадре»</h3>
-          <p>
-            Подойдёт тем, кто хочет работать с мягкой итальянской закваской
-            и получать особенно красивый, деликатный хлеб.
-          </p>
-          <ul>
-            <li>понимание работы с Левито Мадре</li>
-            <li>мягкий, ароматный и эстетичный результат</li>
-            <li>уверенность в процессе и повторяемость результата</li>
-          </ul>
-          <div class="course-footer">
-            <span class="course-note">Запись через WhatsApp</span>
-            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Левито%20Мадре." target="_blank" rel="noopener noreferrer">
-              Хочу Левито Мадре
-            </a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="container">
-      <div class="result-box">
-        <p>
-          Со мной вы приходите не просто к рецептам, а к состоянию,
-          в котором хлеб дома становится нормой: красивый, полезный,
-          ароматный и сделанный вашими руками.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container">
-      <div class="section-title">
-        <span>Вопросы</span>
-        <h2>Что чаще всего спрашивают</h2>
-      </div>
-
-      <div class="faq">
-        <details>
-          <summary>Я новичок. У меня получится?</summary>
-          <p>
-            Да. Курсы подойдут и тем, кто только начинает. Материал строится так,
-            чтобы вы не тонули в сложностях, а шли шаг за шагом к понятному результату.
-          </p>
-        </details>
-
-        <details>
-          <summary>Подходит ли это для дома, если у меня семья и мало времени?</summary>
-          <p>
-            Да. Именно поэтому мой подход удобен для обычной жизни. Он не про идеальные лабораторные условия,
-            а про реальный хлеб дома.
-          </p>
-        </details>
-
-        <details>
-          <summary>Можно ли потом зарабатывать на выпечке?</summary>
-          <p>
-            Да, многие ученицы пришли не только к домашнему хлебу, но и к хлебному ремеслу как к источнику дохода.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="contact">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Готовы начать свой путь?</h2>
-        <p>
-          Напишите мне в WhatsApp, и я помогу выбрать курс, который подойдёт именно вам.
-        </p>
-
-        <div class="cta-actions">
-          <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20подобрать%20подходящий%20курс." target="_blank" rel="noopener noreferrer">
-            Написать в WhatsApp
-          </a>
-          <a class="btn btn-secondary" href="#top">
-            Наверх
-          </a>
         </div>
       </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <div>© 2026 Асия — хлеб на закваске</div>
+      <div>WhatsApp: +7 937 539-82-25</div>
     </div>
-  </section>
+  </footer>
 
-</main>
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const menuWrap = document.getElementById('menuWrap');
 
-<footer>
-  <div class="container footer-row">
-    <div>© 2026 Асия — хлеб на закваске</div>
-    <div>WhatsApp: +7 937 539-82-25</div>
-  </div>
-</footer>
-
-<script>
-const mobileToggle = document.getElementById('mobileToggle');
-const menuWrap = document.getElementById('menuWrap');
-
-mobileToggle.addEventListener('click', () => {
-  menuWrap.classList.toggle('open');
-});
-</script>
+    mobileToggle.addEventListener('click', () => {
+      menuWrap.classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>
