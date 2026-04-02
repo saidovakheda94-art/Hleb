@@ -3,24 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Асия — хлеб на закваске</title>
-  <meta name="description" content="Домашний хлеб на закваске от Асии. Натуральный состав, ручная работа, нежный эстетичный сайт в светлом стиле." />
+  <title>Асия — хлеб на закваске | Курсы</title>
+  <meta name="description" content="Курсы Асии по хлебу на закваске: Gluten Free и Левито Мадре. Премиальный лендинг в нежном светлом стиле." />
   <style>
     :root{
-      --bg: #f8f6f1;
-      --bg-soft: #fcfbf8;
-      --card: rgba(255,255,255,0.78);
-      --line: rgba(185, 191, 171, 0.35);
-      --text: #5d564a;
-      --muted: #8b877d;
-      --olive: #aab59f;
-      --olive-dark: #85907d;
-      --gold: #c9a75b;
-      --gold-soft: #e6d6a6;
-      --bread: #b7844d;
-      --bread-dark: #8d6035;
-      --shadow: 0 12px 30px rgba(125, 120, 105, 0.10);
-      --radius: 24px;
+      --bg: #f8f6f0;
+      --bg-soft: #fcfbf7;
+      --paper: rgba(255,255,255,0.72);
+      --paper-strong: rgba(255,255,255,0.88);
+      --text: #5d564c;
+      --muted: #8b867c;
+      --line: rgba(175, 182, 159, 0.24);
+      --olive: #aab39f;
+      --olive-dark: #88927f;
+      --gold: #c8a25b;
+      --gold-deep: #ad8341;
+      --bread: #b9864d;
+      --bread-deep: #8f6237;
+      --shadow: 0 18px 45px rgba(133, 125, 109, 0.12);
+      --shadow-soft: 0 10px 24px rgba(133, 125, 109, 0.08);
+      --radius-xl: 34px;
+      --radius-lg: 26px;
+      --radius-md: 20px;
       --max: 1180px;
     }
 
@@ -36,11 +40,11 @@
       margin: 0;
       font-family: "Georgia", "Times New Roman", serif;
       color: var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(230, 214, 166, 0.12), transparent 26%),
-        radial-gradient(circle at bottom right, rgba(170, 181, 159, 0.10), transparent 22%),
-        linear-gradient(180deg, #fcfbf8 0%, #f6f4ef 100%);
       line-height: 1.65;
+      background:
+        radial-gradient(circle at 0% 10%, rgba(200,162,91,.10), transparent 24%),
+        radial-gradient(circle at 100% 85%, rgba(170,179,159,.12), transparent 24%),
+        linear-gradient(180deg, #fcfbf8 0%, #f5f2eb 100%);
       overflow-x: hidden;
     }
 
@@ -49,14 +53,14 @@
       position: fixed;
       inset: 0;
       pointer-events: none;
+      z-index: -1;
       background-image:
-        radial-gradient(circle at 12% 18%, rgba(201, 167, 91, 0.10) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 84% 22%, rgba(170, 181, 159, 0.12) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 22% 78%, rgba(201, 167, 91, 0.08) 0 2px, transparent 2.5px),
-        radial-gradient(circle at 76% 72%, rgba(170, 181, 159, 0.10) 0 2px, transparent 2.5px);
-      background-size: 280px 280px, 360px 360px, 320px 320px, 420px 420px;
-      opacity: .45;
-      z-index: -2;
+        radial-gradient(circle at 12% 18%, rgba(200,162,91,0.12) 0 2px, transparent 3px),
+        radial-gradient(circle at 82% 24%, rgba(170,179,159,0.12) 0 2px, transparent 3px),
+        radial-gradient(circle at 22% 78%, rgba(200,162,91,0.08) 0 2px, transparent 3px),
+        radial-gradient(circle at 78% 70%, rgba(170,179,159,0.10) 0 2px, transparent 3px);
+      background-size: 280px 280px, 360px 360px, 340px 340px, 420px 420px;
+      opacity: .4;
     }
 
     img{
@@ -77,14 +81,14 @@
     .topbar{
       position: sticky;
       top: 0;
-      z-index: 30;
+      z-index: 50;
       backdrop-filter: blur(14px);
-      background: rgba(252, 251, 248, 0.72);
-      border-bottom: 1px solid rgba(185, 191, 171, 0.20);
+      background: rgba(252,251,247,0.72);
+      border-bottom: 1px solid rgba(175,182,159,.14);
     }
 
     .nav{
-      min-height: 80px;
+      min-height: 84px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -98,43 +102,43 @@
     }
 
     .brand-mark{
-      width: 44px;
-      height: 44px;
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
+      position: relative;
       background:
-        radial-gradient(circle at 35% 30%, #f2e7ba, #d3ba79 52%, #b8904f 100%);
+        radial-gradient(circle at 38% 30%, #f1e0b1 0%, #d4b26d 52%, #b18444 100%);
       box-shadow:
         inset 0 2px 8px rgba(255,255,255,.55),
-        0 8px 20px rgba(183, 132, 77, 0.18);
-      position: relative;
+        0 10px 22px rgba(177,132,68,.18);
       flex-shrink: 0;
     }
 
     .brand-mark::before{
       content: "";
       position: absolute;
-      inset: 10px;
-      border: 1.2px solid rgba(255,255,255,.75);
+      inset: 11px;
       border-radius: 50%;
+      border: 1.4px solid rgba(255,255,255,.76);
     }
 
     .brand-text{
       display: flex;
       flex-direction: column;
-      line-height: 1.05;
+      line-height: 1.02;
     }
 
     .brand-text strong{
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 700;
-      color: #675d4f;
+      color: #665d50;
     }
 
     .brand-text span{
       font-size: 12px;
-      letter-spacing: .6px;
-      text-transform: uppercase;
       color: var(--muted);
+      letter-spacing: .8px;
+      text-transform: uppercase;
     }
 
     .menu{
@@ -145,26 +149,27 @@
     }
 
     .menu a{
-      color: var(--muted);
       font-size: 15px;
+      color: var(--muted);
       transition: .2s ease;
     }
 
     .menu a:hover{
-      color: var(--bread-dark);
+      color: var(--bread-deep);
     }
 
     .btn{
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 14px 22px;
+      gap: 10px;
+      padding: 15px 24px;
       border-radius: 999px;
       border: none;
       cursor: pointer;
       font: inherit;
       font-size: 15px;
-      transition: .2s ease;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
     }
 
     .btn:hover{
@@ -172,15 +177,16 @@
     }
 
     .btn-primary{
-      background: linear-gradient(180deg, #c79f5e 0%, #af8148 100%);
-      color: white;
-      box-shadow: 0 10px 25px rgba(175, 129, 72, 0.22);
+      color: #fff;
+      background: linear-gradient(180deg, #c9a25b 0%, #ad8341 100%);
+      box-shadow: 0 12px 28px rgba(173,131,65,.22);
     }
 
     .btn-secondary{
-      background: rgba(255,255,255,.72);
-      color: var(--bread-dark);
-      border: 1px solid rgba(201, 167, 91, 0.28);
+      background: rgba(255,255,255,.74);
+      color: var(--bread-deep);
+      border: 1px solid rgba(200,162,91,.28);
+      box-shadow: var(--shadow-soft);
     }
 
     .mobile-toggle{
@@ -189,7 +195,7 @@
 
     .hero{
       position: relative;
-      padding: 70px 0 42px;
+      padding: 72px 0 44px;
       overflow: hidden;
     }
 
@@ -198,36 +204,33 @@
       content: "";
       position: absolute;
       pointer-events: none;
-      opacity: .52;
+      opacity: .55;
       z-index: 0;
     }
 
     .hero::before{
-      width: 260px;
-      height: 520px;
-      left: -40px;
-      top: 10px;
+      top: 20px;
+      left: -20px;
+      width: 220px;
+      height: 620px;
       background:
-        radial-gradient(circle at 20% 10%, rgba(201,167,91,.10) 0 4px, transparent 5px),
-        linear-gradient(140deg, transparent 0 30%, rgba(170,181,159,.16) 31% 32%, transparent 33% 100%);
-      filter: blur(.2px);
+        linear-gradient(145deg, transparent 0 38%, rgba(170,179,159,.14) 39% 40%, transparent 41% 100%);
     }
 
     .hero::after{
-      width: 280px;
-      height: 540px;
-      right: -30px;
-      top: 40px;
+      right: -20px;
+      top: 70px;
+      width: 230px;
+      height: 620px;
       background:
-        radial-gradient(circle at 70% 20%, rgba(201,167,91,.10) 0 4px, transparent 5px),
-        linear-gradient(45deg, transparent 0 64%, rgba(170,181,159,.18) 65% 66%, transparent 67% 100%);
+        linear-gradient(45deg, transparent 0 62%, rgba(170,179,159,.18) 63% 64%, transparent 65% 100%);
     }
 
     .hero-grid{
       position: relative;
       z-index: 1;
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.05fr .95fr;
       gap: 34px;
       align-items: center;
     }
@@ -238,27 +241,53 @@
       gap: 8px;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,.70);
-      border: 1px solid rgba(201,167,91,.22);
-      color: #8d7b59;
+      background: rgba(255,255,255,.78);
+      border: 1px solid rgba(200,162,91,.18);
+      color: #8d7b5e;
       font-size: 14px;
       margin-bottom: 18px;
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
     }
 
     .hero h1{
       margin: 0 0 18px;
-      font-size: clamp(36px, 5vw, 68px);
-      line-height: 1.04;
+      font-size: clamp(38px, 5vw, 70px);
+      line-height: 1.03;
       font-weight: 700;
-      color: #62584c;
+      color: #665c4f;
     }
 
-    .hero p{
-      margin: 0 0 26px;
+    .hero-text{
       font-size: 18px;
       color: var(--muted);
-      max-width: 620px;
+      max-width: 650px;
+      margin-bottom: 20px;
+    }
+
+    .hero-bullets{
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      max-width: 420px;
+    }
+
+    .hero-bullets li{
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 17px;
+      color: #6d6559;
+    }
+
+    .hero-dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #efd48a, #d0ab58);
+      box-shadow: 0 4px 10px rgba(208,171,88,.22);
+      flex-shrink: 0;
     }
 
     .hero-actions{
@@ -268,69 +297,76 @@
       margin-bottom: 28px;
     }
 
-    .hero-points{
+    .hero-note{
+      max-width: 660px;
+      color: #7c756a;
+      font-size: 17px;
+    }
+
+    .hero-stats{
       display: grid;
       grid-template-columns: repeat(3, minmax(120px, 1fr));
       gap: 14px;
+      margin-top: 28px;
       max-width: 760px;
     }
 
-    .hero-point{
-      background: rgba(255,255,255,.62);
-      border: 1px solid rgba(185, 191, 171, 0.28);
-      border-radius: 20px;
+    .stat{
       padding: 18px;
-      box-shadow: var(--shadow);
+      border-radius: 22px;
+      background: rgba(255,255,255,.66);
+      border: 1px solid rgba(175,182,159,.22);
+      box-shadow: var(--shadow-soft);
     }
 
-    .hero-point strong{
+    .stat strong{
       display: block;
       margin-bottom: 4px;
-      font-size: 22px;
-      color: var(--bread-dark);
+      font-size: 24px;
+      color: var(--bread-deep);
     }
 
-    .hero-point span{
+    .stat span{
       font-size: 14px;
       color: var(--muted);
     }
 
-    .hero-visual{
+    .hero-card-wrap{
       position: relative;
-      min-height: 650px;
+      min-height: 680px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    .olive-branch{
+    .olive-line{
       position: absolute;
       width: 180px;
-      height: 420px;
-      opacity: .65;
+      height: 470px;
+      opacity: .68;
       z-index: 0;
     }
 
-    .olive-branch.left{
+    .olive-line.left{
       left: 0;
       top: 70px;
       transform: rotate(-10deg);
     }
 
-    .olive-branch.right{
+    .olive-line.right{
       right: 0;
-      bottom: 40px;
-      transform: rotate(14deg);
+      bottom: 45px;
+      transform: rotate(12deg);
     }
 
-    .olive-branch::before{
+    .olive-line::before{
       content: "";
       position: absolute;
       left: 50%;
       top: 0;
       width: 2px;
       height: 100%;
-      background: linear-gradient(180deg, rgba(150,160,145,.1), rgba(150,160,145,.55), rgba(150,160,145,.1));
+      background: linear-gradient(180deg, rgba(146,156,137,.08), rgba(146,156,137,.55), rgba(146,156,137,.08));
       transform: translateX(-50%);
     }
 
@@ -338,194 +374,173 @@
       position: absolute;
       width: 24px;
       height: 84px;
-      border-radius: 50% 50% 48% 48% / 14% 14% 86% 86%;
-      background: linear-gradient(180deg, rgba(179,191,171,.78), rgba(152,166,147,.52));
-      filter: blur(.1px);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+      border-radius: 50% 50% 46% 46% / 14% 14% 86% 86%;
+      background: linear-gradient(180deg, rgba(180,191,172,.80), rgba(151,165,145,.54));
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.16);
     }
 
     .olive{
       position: absolute;
-      width: 20px;
-      height: 30px;
+      width: 22px;
+      height: 32px;
       border-radius: 50%;
-      background: radial-gradient(circle at 35% 30%, #efd98c 0%, #cfaa4a 55%, #b38b33 100%);
-      box-shadow: inset 0 1px 3px rgba(255,255,255,.4);
+      background: radial-gradient(circle at 35% 28%, #f0db91 0%, #d2ad4d 55%, #b38a34 100%);
+      box-shadow: inset 0 1px 4px rgba(255,255,255,.45);
     }
 
     .hero-card{
       position: relative;
-      width: min(100%, 500px);
-      min-height: 590px;
+      z-index: 1;
+      width: min(100%, 520px);
+      min-height: 620px;
+      padding: 26px;
+      border-radius: 40px;
       background:
-        linear-gradient(180deg, rgba(255,255,255,.54), rgba(255,255,255,.42));
-      border: 1px solid rgba(255,255,255,.65);
-      border-radius: 36px;
-      box-shadow: 0 24px 60px rgba(138, 133, 120, 0.12);
+        linear-gradient(180deg, rgba(255,255,255,.56), rgba(255,255,255,.42));
+      border: 1px solid rgba(255,255,255,.72);
+      box-shadow: 0 26px 64px rgba(129, 120, 106, 0.14);
       overflow: hidden;
       backdrop-filter: blur(10px);
-      z-index: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 26px;
     }
 
     .hero-card::before{
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(circle at 20% 18%, rgba(201,167,91,.10), transparent 18%),
-        radial-gradient(circle at 78% 82%, rgba(170,181,159,.12), transparent 22%),
-        linear-gradient(180deg, rgba(255,255,255,.28), rgba(255,255,255,.05));
       pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(200,162,91,.10), transparent 16%),
+        radial-gradient(circle at 78% 84%, rgba(170,179,159,.12), transparent 20%),
+        linear-gradient(180deg, rgba(255,255,255,.24), rgba(255,255,255,.04));
     }
 
-    .asiya-figure{
+    .asiya-art{
       position: relative;
       width: 100%;
-      max-width: 420px;
-      height: 540px;
+      height: 570px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .hijab{
       position: absolute;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 300px;
-      height: 230px;
-      background:
-        radial-gradient(circle at 35% 30%, #ebe9e0 0%, #d7d2c5 58%, #b7b0a0 100%);
+      top: 10px;
+      width: 320px;
+      height: 245px;
       border-radius: 42% 42% 48% 48% / 30% 30% 60% 60%;
+      background:
+        radial-gradient(circle at 35% 28%, #ece9df 0%, #d7d1c3 58%, #b6af9d 100%);
       box-shadow:
-        inset -18px -18px 22px rgba(124,116,97,.20),
-        inset 14px 12px 18px rgba(255,255,255,.35);
+        inset -18px -18px 22px rgba(125,117,97,.18),
+        inset 14px 12px 18px rgba(255,255,255,.34);
     }
 
     .hijab::before{
       content: "";
       position: absolute;
-      left: 30px;
-      right: 30px;
-      top: 28px;
-      bottom: 34px;
-      border-radius: 44% 44% 48% 48% / 28% 28% 60% 60%;
+      inset: 28px 30px 34px;
+      border-radius: inherit;
       background:
         repeating-linear-gradient(
           180deg,
-          rgba(118,110,92,.18) 0 2px,
-          rgba(235,233,224,.0) 18px 30px
+          rgba(118,110,92,.16) 0 2px,
+          rgba(235,233,224,0) 18px 30px
         );
-      opacity: .85;
-      filter: blur(.35px);
+      opacity: .9;
     }
 
     .dress{
       position: absolute;
-      bottom: 8px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 315px;
-      height: 370px;
+      bottom: 4px;
+      width: 335px;
+      height: 388px;
+      border-radius: 40% 40% 14% 14% / 16% 16% 12% 12%;
       background:
-        linear-gradient(180deg, #f1e5d7 0%, #e6d4bf 100%);
-      border-radius: 38% 38% 14% 14% / 16% 16% 12% 12%;
+        linear-gradient(180deg, #f2e5d7 0%, #e5d3bf 100%);
       box-shadow:
         inset 0 18px 24px rgba(255,255,255,.22),
-        inset 0 -18px 26px rgba(175,153,128,.12);
+        inset 0 -18px 24px rgba(175,154,128,.12);
     }
 
     .dress::before{
       content: "";
       position: absolute;
       inset: 18px 28px 0;
+      border-radius: inherit;
       background:
         repeating-linear-gradient(
           90deg,
-          rgba(255,255,255,.0) 0 14px,
-          rgba(193,170,144,.18) 15px 17px
+          rgba(255,255,255,0) 0 14px,
+          rgba(193,170,144,.17) 15px 17px
         );
-      border-radius: inherit;
-      opacity: .8;
-    }
-
-    .belt{
-      position: absolute;
-      left: 50%;
-      bottom: 146px;
-      transform: translateX(-50%);
-      width: 180px;
-      height: 2px;
-      background: rgba(161,137,108,.55);
-      z-index: 3;
+      opacity: .85;
     }
 
     .sleeve{
       position: absolute;
-      width: 118px;
-      height: 180px;
-      background: linear-gradient(180deg, #f0e2d0 0%, #e0ccb4 100%);
+      width: 122px;
+      height: 188px;
       border-radius: 42% 42% 46% 46% / 20% 20% 80% 80%;
-      z-index: 2;
+      background: linear-gradient(180deg, #f1e2d0 0%, #e1cdb6 100%);
       box-shadow: inset 0 -14px 20px rgba(173,151,127,.13);
+      z-index: 2;
     }
 
     .sleeve.left{
-      left: 22px;
-      top: 210px;
+      left: 28px;
+      top: 218px;
       transform: rotate(18deg);
     }
 
     .sleeve.right{
-      right: 22px;
-      top: 210px;
+      right: 28px;
+      top: 218px;
       transform: rotate(-18deg);
     }
 
     .glove{
       position: absolute;
-      width: 92px;
-      height: 54px;
-      background: linear-gradient(180deg, #fefcf8 0%, #ece9e3 100%);
-      border-radius: 22px;
+      width: 98px;
+      height: 58px;
+      border-radius: 24px;
+      background: linear-gradient(180deg, #fffcf7 0%, #ece8e1 100%);
+      box-shadow: inset 0 -6px 10px rgba(170,170,170,.10);
       z-index: 4;
-      box-shadow: inset 0 -6px 10px rgba(175,175,175,.10);
     }
 
     .glove.left{
-      left: 82px;
-      top: 312px;
+      left: 92px;
+      top: 326px;
       transform: rotate(8deg);
     }
 
     .glove.right{
-      right: 82px;
-      top: 312px;
+      right: 92px;
+      top: 326px;
       transform: rotate(-8deg);
     }
 
     .bread{
       position: absolute;
       left: 50%;
-      top: 255px;
+      top: 262px;
       transform: translateX(-50%);
-      width: 120px;
-      height: 155px;
-      background:
-        radial-gradient(circle at 45% 35%, #f4ddab 0%, #d3a263 52%, #93582d 88%, #71401d 100%);
+      width: 130px;
+      height: 162px;
       border-radius: 48% 48% 40% 40% / 18% 18% 82% 82%;
+      background:
+        radial-gradient(circle at 45% 34%, #f6dfb1 0%, #d5a364 52%, #975b30 88%, #73401d 100%);
       z-index: 5;
       box-shadow:
         inset 0 12px 16px rgba(255,255,255,.18),
-        0 10px 24px rgba(130, 88, 43, .18);
+        0 12px 28px rgba(130,88,43,.18);
     }
 
     .bread::before{
       content: "";
       position: absolute;
-      inset: 18px 16px 18px 16px;
+      inset: 18px 16px;
       border-radius: 42% 42% 36% 36% / 16% 16% 84% 84%;
       background:
         radial-gradient(circle at 40% 30%, rgba(255,245,216,.72) 0 6px, transparent 7px),
@@ -534,41 +549,57 @@
         radial-gradient(circle at 70% 70%, rgba(255,245,216,.60) 0 5px, transparent 6px),
         radial-gradient(circle at 52% 82%, rgba(255,245,216,.58) 0 4px, transparent 5px),
         linear-gradient(180deg, #f4deb9 0%, #d9b07d 100%);
-      box-shadow: inset 0 0 0 2px rgba(255,255,255,.18);
     }
 
-    .drop{
+    .oil-drop{
       position: absolute;
-      right: 36px;
-      bottom: 78px;
-      width: 32px;
-      height: 42px;
-      background: linear-gradient(180deg, #ddb85a 0%, #ae7b1f 100%);
+      right: 42px;
+      bottom: 72px;
+      width: 34px;
+      height: 46px;
       border-radius: 50% 50% 58% 58% / 22% 22% 78% 78%;
+      background: linear-gradient(180deg, #ddb85a 0%, #ae7b1f 100%);
       transform: rotate(10deg);
       box-shadow: inset -3px -4px 6px rgba(122,81,14,.18);
       z-index: 2;
     }
 
-    .drop::before{
+    .oil-drop::before{
       content: "";
       position: absolute;
       top: 4px;
-      right: 6px;
+      right: 7px;
       width: 8px;
       height: 24px;
       border-radius: 50%;
       background: rgba(255,255,255,.45);
-      transform: rotate(22deg);
+      transform: rotate(20deg);
+    }
+
+    .hero-card-caption{
+      position: absolute;
+      left: 24px;
+      right: 24px;
+      bottom: 18px;
+      z-index: 6;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(255,255,255,.74);
+      backdrop-filter: blur(8px);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
+      font-size: 15px;
+      color: #766f64;
     }
 
     section{
-      padding: 34px 0 14px;
+      padding: 38px 0 16px;
     }
 
     .section-title{
-      max-width: 780px;
-      margin: 0 auto 28px;
+      max-width: 800px;
+      margin: 0 auto 30px;
       text-align: center;
     }
 
@@ -576,18 +607,18 @@
       display: inline-block;
       padding: 6px 12px;
       border-radius: 999px;
-      background: rgba(255,255,255,.72);
-      border: 1px solid rgba(185, 191, 171, 0.24);
-      color: #8b7f66;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(175,182,159,.20);
+      color: #8b7f67;
       font-size: 13px;
       margin-bottom: 12px;
     }
 
     .section-title h2{
       margin: 0 0 10px;
-      font-size: clamp(28px, 4vw, 44px);
-      line-height: 1.12;
-      color: #675d4f;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+      color: #665d50;
     }
 
     .section-title p{
@@ -596,8 +627,7 @@
       color: var(--muted);
     }
 
-    .about-grid,
-    .contact-grid{
+    .grid-2{
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
@@ -605,13 +635,13 @@
 
     .card{
       position: relative;
-      background: var(--card);
-      border: 1px solid rgba(185, 191, 171, 0.22);
-      border-radius: var(--radius);
-      padding: 26px;
+      padding: 28px;
+      border-radius: var(--radius-lg);
+      background: var(--paper);
+      border: 1px solid rgba(175,182,159,.22);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
       overflow: hidden;
+      backdrop-filter: blur(8px);
     }
 
     .card::before{
@@ -620,14 +650,14 @@
       inset: 0;
       pointer-events: none;
       background:
-        radial-gradient(circle at 12% 20%, rgba(201,167,91,.07), transparent 12%),
-        radial-gradient(circle at 84% 80%, rgba(170,181,159,.09), transparent 14%);
+        radial-gradient(circle at 12% 20%, rgba(200,162,91,.07), transparent 12%),
+        radial-gradient(circle at 84% 80%, rgba(170,179,159,.09), transparent 14%);
     }
 
     .card h3{
       margin: 0 0 12px;
-      font-size: 24px;
-      color: #665c50;
+      font-size: 28px;
+      color: #675d50;
     }
 
     .card p{
@@ -649,302 +679,174 @@
       align-items: flex-start;
     }
 
-    .dot{
+    .list-dot{
       width: 24px;
       height: 24px;
-      flex-shrink: 0;
       border-radius: 50%;
-      background: linear-gradient(180deg, #eed48b, #cfaa54);
-      color: white;
+      background: linear-gradient(180deg, #efd48a, #d0ab56);
+      box-shadow: 0 6px 12px rgba(208,171,86,.18);
+      color: #fff;
       font-size: 12px;
       font-weight: 700;
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      flex-shrink: 0;
       margin-top: 2px;
-      box-shadow: 0 6px 12px rgba(201,167,91,.18);
     }
 
-    .products{
+    .trust{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 18px;
     }
 
-    .product{
-      background: rgba(255,255,255,.68);
-      border: 1px solid rgba(185, 191, 171, 0.22);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
+    .trust-card{
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(175,182,159,.22);
+      box-shadow: var(--shadow-soft);
+      text-align: center;
     }
 
-    .product-media{
-      position: relative;
-      height: 250px;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,.52), transparent 20%),
-        linear-gradient(180deg, #fbfaf7 0%, #f1eee8 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
+    .trust-card strong{
+      display: block;
+      margin-bottom: 8px;
+      font-size: 32px;
+      color: var(--bread-deep);
     }
 
-    .product-media::before{
-      content: "";
-      position: absolute;
-      top: 12px;
-      left: 12px;
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      background: rgba(201,167,91,.06);
-      filter: blur(4px);
-    }
-
-    .product-media::after{
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(135deg, transparent 0 18%, rgba(170,181,159,.10) 19% 20%, transparent 21% 100%);
-      opacity: .55;
-    }
-
-    .mini-olive{
-      position: absolute;
-      width: 120px;
-      height: 120px;
-      opacity: .45;
-    }
-
-    .mini-olive.left{
-      left: -10px;
-      top: -10px;
-      transform: rotate(-20deg);
-    }
-
-    .mini-olive.right{
-      right: 0;
-      bottom: 0;
-      transform: rotate(18deg);
-    }
-
-    .mini-bread{
-      position: relative;
-      width: 72%;
-      aspect-ratio: 1.3/0.95;
-      border-radius: 48% 52% 46% 54% / 34% 34% 66% 66%;
-      background:
-        radial-gradient(circle at 40% 30%, #f3ddb1 0%, #d6a264 48%, #996031 82%, #75411f 100%);
-      box-shadow:
-        inset 0 14px 18px rgba(255,255,255,.18),
-        inset 0 -14px 22px rgba(107,71,35,.12),
-        0 18px 26px rgba(133, 98, 58, .14);
-      z-index: 2;
-    }
-
-    .mini-bread::before{
-      content: "";
-      position: absolute;
-      inset: 18px 22px;
-      border-radius: 42% 42% 40% 40% / 24% 24% 76% 76%;
-      background:
-        radial-gradient(circle at 32% 36%, rgba(255,245,216,.72) 0 6px, transparent 7px),
-        radial-gradient(circle at 66% 48%, rgba(255,245,216,.60) 0 5px, transparent 6px),
-        radial-gradient(circle at 48% 72%, rgba(255,245,216,.58) 0 5px, transparent 6px),
-        linear-gradient(180deg, #f5e1bc 0%, #dbb17f 100%);
-    }
-
-    .product-body{
-      padding: 22px;
-    }
-
-    .product h3{
-      margin: 0 0 8px;
-      font-size: 22px;
-      color: #685d50;
-    }
-
-    .product p{
-      margin: 0 0 16px;
+    .trust-card span{
       color: var(--muted);
       font-size: 15px;
     }
 
-    .price-row{
+    .courses{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .course{
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      border-radius: 30px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.68));
+      border: 1px solid rgba(175,182,159,.22);
+      box-shadow: var(--shadow);
+    }
+
+    .course::before{
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      top: -40px;
+      right: -40px;
+      background: rgba(200,162,91,.08);
+      filter: blur(2px);
+    }
+
+    .course-tag{
+      display: inline-flex;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.76);
+      border: 1px solid rgba(200,162,91,.18);
+      color: #8d7b5e;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .course h3{
+      margin: 0 0 10px;
+      font-size: 30px;
+      color: #675d50;
+    }
+
+    .course p{
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .course ul{
+      list-style: none;
+      margin: 18px 0 24px;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .course li{
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #70685d;
+    }
+
+    .course li::before{
+      content: "•";
+      color: var(--gold-deep);
+      font-size: 22px;
+      line-height: 1;
+      margin-top: -2px;
+    }
+
+    .course-footer{
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .price{
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--bread-dark);
+    .course-note{
+      color: #8b857a;
+      font-size: 14px;
     }
 
-    .steps{
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step{
-      background: rgba(255,255,255,.68);
-      border: 1px solid rgba(185, 191, 171, 0.22);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(8px);
-    }
-
-    .step-num{
-      width: 44px;
-      height: 44px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, #eed48b, #d0ab56);
-      color: white;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      margin-bottom: 14px;
-      box-shadow: 0 8px 18px rgba(208,171,86,.18);
-    }
-
-    .step h3{
-      margin: 0 0 8px;
-      font-size: 20px;
-      color: #655c50;
-    }
-
-    .step p{
-      margin: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .quote{
-      margin-top: 24px;
-      padding: 30px;
-      border-radius: 28px;
+    .result-box{
+      padding: 32px;
+      border-radius: 32px;
       background:
-        linear-gradient(135deg, rgba(170,181,159,.22), rgba(201,167,91,.20)),
-        rgba(255,255,255,.58);
-      border: 1px solid rgba(185,191,171,.22);
+        linear-gradient(135deg, rgba(170,179,159,.18), rgba(200,162,91,.18)),
+        rgba(255,255,255,.66);
+      border: 1px solid rgba(175,182,159,.20);
       box-shadow: var(--shadow);
       text-align: center;
     }
 
-    .quote p{
+    .result-box p{
       margin: 0;
-      font-size: clamp(20px, 2vw, 28px);
-      color: #6b6256;
+      font-size: clamp(21px, 2vw, 30px);
+      color: #6c6458;
       line-height: 1.45;
-    }
-
-    .contact-item{
-      padding: 14px 0;
-      border-bottom: 1px solid rgba(185,191,171,.22);
-    }
-
-    .contact-item:last-child{
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .contact-item strong{
-      display: block;
-      margin-bottom: 4px;
-      color: #655c50;
-    }
-
-    .contact-item span,
-    .contact-item a{
-      color: var(--muted);
-    }
-
-    form{
-      display: grid;
-      gap: 14px;
-    }
-
-    .field{
-      display: grid;
-      gap: 8px;
-    }
-
-    label{
-      font-size: 14px;
-      font-weight: 700;
-      color: #665c50;
-    }
-
-    input,
-    textarea{
-      width: 100%;
-      border: 1px solid rgba(185,191,171,.30);
-      background: rgba(255,255,255,.70);
-      border-radius: 16px;
-      padding: 14px 16px;
-      font: inherit;
-      color: var(--text);
-      outline: none;
-      transition: .2s ease;
-    }
-
-    input:focus,
-    textarea:focus{
-      border-color: rgba(201,167,91,.60);
-      box-shadow: 0 0 0 4px rgba(201,167,91,.10);
-    }
-
-    textarea{
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .form-note{
-      font-size: 13px;
-      color: var(--muted);
-      margin-top: -4px;
-    }
-
-    .success{
-      display: none;
-      margin-top: 10px;
-      padding: 14px 16px;
-      border-radius: 16px;
-      background: rgba(237, 244, 232, .90);
-      border: 1px solid rgba(170,181,159,.35);
-      color: #627056;
-      font-size: 14px;
     }
 
     .faq{
       display: grid;
       gap: 14px;
-      max-width: 900px;
+      max-width: 920px;
       margin: 0 auto;
     }
 
     details{
-      background: rgba(255,255,255,.68);
-      border: 1px solid rgba(185,191,171,.22);
-      border-radius: 20px;
       padding: 18px 20px;
-      box-shadow: var(--shadow);
+      border-radius: 20px;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(175,182,159,.22);
+      box-shadow: var(--shadow-soft);
     }
 
     summary{
       cursor: pointer;
-      font-weight: 700;
-      color: #665c50;
       list-style: none;
+      font-weight: 700;
+      color: #675d50;
     }
 
     summary::-webkit-details-marker{
@@ -956,10 +858,46 @@
       color: var(--muted);
     }
 
+    .cta{
+      text-align: center;
+      padding-bottom: 24px;
+    }
+
+    .cta-box{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 36px 28px;
+      border-radius: 34px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.84), rgba(255,255,255,.70));
+      border: 1px solid rgba(175,182,159,.22);
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h2{
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 48px);
+      color: #665d50;
+    }
+
+    .cta-box p{
+      margin: 0 auto 22px;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .cta-actions{
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
     footer{
       margin-top: 36px;
       padding: 28px 0 40px;
-      border-top: 1px solid rgba(185,191,171,.18);
+      border-top: 1px solid rgba(175,182,159,.16);
       color: var(--muted);
       font-size: 14px;
     }
@@ -973,19 +911,18 @@
 
     @media (max-width: 980px){
       .hero-grid,
-      .about-grid,
-      .contact-grid,
-      .products,
-      .steps{
+      .grid-2,
+      .courses,
+      .trust{
         grid-template-columns: 1fr;
       }
 
-      .hero-points{
+      .hero-stats{
         grid-template-columns: 1fr;
       }
 
-      .hero-visual{
-        min-height: 580px;
+      .hero-card-wrap{
+        min-height: 620px;
       }
     }
 
@@ -1001,13 +938,13 @@
 
       .mobile-toggle{
         display: inline-flex;
-        background: rgba(255,255,255,.72);
-        border: 1px solid rgba(185,191,171,.25);
+        background: rgba(255,255,255,.74);
+        border: 1px solid rgba(175,182,159,.22);
         border-radius: 14px;
         padding: 10px 14px;
         color: var(--text);
-        cursor: pointer;
         font-weight: 700;
+        cursor: pointer;
       }
 
       .menu-wrap{
@@ -1031,45 +968,46 @@
       }
 
       .hero h1{
-        font-size: 38px;
+        font-size: 40px;
       }
 
-      .hero p{
+      .hero-text,
+      .hero-note{
         font-size: 16px;
       }
 
       .hero-card{
-        min-height: 510px;
+        min-height: 560px;
       }
 
-      .asiya-figure{
-        height: 470px;
+      .asiya-art{
+        height: 500px;
       }
 
       .hijab{
-        width: 250px;
-        height: 190px;
+        width: 270px;
+        height: 200px;
       }
 
       .dress{
-        width: 270px;
-        height: 320px;
+        width: 285px;
+        height: 330px;
       }
 
       .bread{
-        width: 104px;
-        height: 136px;
-        top: 228px;
+        width: 112px;
+        height: 142px;
+        top: 232px;
       }
 
       .glove.left{
-        left: 60px;
-        top: 286px;
+        left: 66px;
+        top: 292px;
       }
 
       .glove.right{
-        right: 60px;
-        top: 286px;
+        right: 66px;
+        top: 292px;
       }
 
       .sleeve.left{
@@ -1083,6 +1021,7 @@
   </style>
 </head>
 <body>
+
   <header class="topbar">
     <div class="container nav">
       <a href="#" class="brand">
@@ -1097,10 +1036,11 @@
         <button class="mobile-toggle" id="mobileToggle">Меню</button>
         <div class="menu-wrap" id="menuWrap">
           <nav class="menu">
-            <a href="#about">О нас</a>
-            <a href="#products">Ассортимент</a>
-            <a href="#process">Как готовим</a>
-            <a href="#contact">Заказать</a>
+            <a href="#about">Обо мне</a>
+            <a href="#why">Почему я</a>
+            <a href="#courses">Курсы</a>
+            <a href="#faq">Вопросы</a>
+            <a href="#contact">Записаться</a>
           </nav>
         </div>
       </div>
@@ -1108,39 +1048,61 @@
   </header>
 
   <main>
-    <section class="hero">
+
+    <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <div class="badge">Натуральный хлеб • тёплая домашняя выпечка</div>
-          <h1>Хлеб на закваске<br>с мягким вкусом<br>и женственным уютом</h1>
-          <p>
-            Меня зовут Асия. Я пеку хлеб на закваске вручную — спокойно, бережно и с любовью
-            к чистому составу, красивой подаче и домашнему теплу.
-          </p>
+          <div class="badge">Полезный хлеб • закваска • женственный премиум стиль</div>
 
-          <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Оставить заказ</a>
-            <a href="#products" class="btn btn-secondary">Посмотреть хлеб</a>
+          <h1>
+            Забудьте о скучных рецептах.<br>
+            Пора научиться печь хлеб,<br>
+            который меняет всё.
+          </h1>
+
+          <div class="hero-text">
+            Закваска — ваш секретный ингредиент. С её дикими дрожжами и молочно-кислыми бактериями
+            каждый хлеб становится настоящим произведением искусства.
           </div>
 
-          <div class="hero-points">
-            <div class="hero-point">
-              <strong>100%</strong>
-              <span>натуральный состав</span>
+          <ul class="hero-bullets">
+            <li><span class="hero-dot"></span><span>хрустящая корочка</span></li>
+            <li><span class="hero-dot"></span><span>воздушный мякиш</span></li>
+            <li><span class="hero-dot"></span><span>глубокий, неповторимый вкус</span></li>
+          </ul>
+
+          <div class="hero-note">
+            Каждый хлеб — это не просто еда. Это момент тепла и заботы о ваших близких.
+            Давайте вместе приготовим что-то по-настоящему особенное.
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20записаться%20на%20курс%20по%20хлебу." target="_blank" rel="noopener noreferrer">
+              Записаться в WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#courses">
+              Посмотреть курсы
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <strong>450+</strong>
+              <span>женщин уже прошли путь от закваски до идеального хлеба</span>
             </div>
-            <div class="hero-point">
-              <strong>24–36 ч</strong>
-              <span>медленное брожение</span>
+            <div class="stat">
+              <strong>2 курса</strong>
+              <span>для разных целей и разных форматов выпечки</span>
             </div>
-            <div class="hero-point">
-              <strong>Вручную</strong>
-              <span>замес и выпечка</span>
+            <div class="stat">
+              <strong>Дом + доход</strong>
+              <span>многие ученицы перестали покупать хлеб и начали зарабатывать</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="olive-branch left">
+        <div class="hero-card-wrap">
+          <div class="olive-line left">
             <span class="leaf" style="left:52px; top:20px; transform: rotate(-50deg);"></span>
             <span class="leaf" style="left:90px; top:68px; transform: rotate(32deg);"></span>
             <span class="leaf" style="left:44px; top:118px; transform: rotate(-56deg);"></span>
@@ -1153,20 +1115,22 @@
           </div>
 
           <div class="hero-card">
-            <div class="asiya-figure">
+            <div class="asiya-art">
               <div class="hijab"></div>
               <div class="dress"></div>
-              <div class="belt"></div>
               <div class="sleeve left"></div>
               <div class="sleeve right"></div>
               <div class="glove left"></div>
               <div class="glove right"></div>
               <div class="bread"></div>
-              <div class="drop"></div>
+              <div class="oil-drop"></div>
+            </div>
+            <div class="hero-card-caption">
+              Меня зовут <strong>Асия</strong>, и я стану вашим путеводителем в мир вкусной и полезной выпечки.
             </div>
           </div>
 
-          <div class="olive-branch right">
+          <div class="olive-line right">
             <span class="leaf" style="left:80px; top:30px; transform: rotate(46deg);"></span>
             <span class="leaf" style="left:34px; top:88px; transform: rotate(-32deg);"></span>
             <span class="leaf" style="left:86px; top:140px; transform: rotate(42deg);"></span>
@@ -1184,278 +1148,200 @@
     <section id="about">
       <div class="container">
         <div class="section-title">
-          <span>О проекте</span>
-          <h2>Спокойный хлеб, который готовится без спешки</h2>
+          <span>Обо мне</span>
+          <h2>Я не просто обучаю рецептам — я провожу вас к результату</h2>
           <p>
-            Здесь важны не только вкус и аромат, но и чистота состава, мягкое настроение
-            бренда и красивое, деликатное оформление.
+            Полезный, красивый и по-настоящему вкусный хлеб может стать частью вашей повседневной жизни.
           </p>
         </div>
 
-        <div class="about-grid">
+        <div class="grid-2">
           <div class="card">
-            <h3>Почему закваска?</h3>
+            <h3>Меня зовут Асия</h3>
             <p>
-              Такой хлеб раскрывается постепенно. У него живой характер, красивая корочка,
-              выразительный мякиш и ощущение настоящей домашней выпечки.
+              Я кондитер, домашний пекарь и многодетная мама. И я понимаю, как важно,
+              чтобы на столе каждый день была полезная еда.
             </p>
+            <p>
+              Для меня хлеб — это не просто выпечка. Это забота о семье, уют дома,
+              спокойствие и уверенность в том, что вы даёте близким лучшее.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Что вы получите</h3>
             <ul class="list">
-              <li><span class="dot">1</span><span>Натуральное брожение без спешки</span></li>
-              <li><span class="dot">2</span><span>Глубокий вкус и мягкий аромат</span></li>
-              <li><span class="dot">3</span><span>Ручная работа и внимание к деталям</span></li>
+              <li><span class="list-dot">1</span><span>Понятную систему без хаоса и бесконечных проб</span></li>
+              <li><span class="list-dot">2</span><span>Хлеб, который хочется печь снова и снова</span></li>
+              <li><span class="list-dot">3</span><span>Навык для семьи, удовольствия и, при желании, заработка</span></li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="card">
-            <h3>О Асии</h3>
+    <section id="why">
+      <div class="container">
+        <div class="section-title">
+          <span>Почему именно со мной</span>
+          <h2>Потому что я веду не к красивой теории, а к реальному хлебу на вашем столе</h2>
+          <p>
+            Мой подход — мягкий, понятный и ориентированный на обычную женщину, у которой есть семья, дела и жизнь.
+          </p>
+        </div>
+
+        <div class="trust">
+          <div class="trust-card">
+            <strong>450+</strong>
+            <span>обычных домохозяек уже прошли путь со мной</span>
+          </div>
+          <div class="trust-card">
+            <strong>С нуля</strong>
+            <span>многие начинали без опыта, страха и понимания закваски</span>
+          </div>
+          <div class="trust-card">
+            <strong>Результат</strong>
+            <span>часть учениц перестала покупать выпечку и начала зарабатывать</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="courses">
+      <div class="container">
+        <div class="section-title">
+          <span>Курсы</span>
+          <h2>Выберите направление, которое подходит именно вам</h2>
+          <p>
+            Два пути — два формата результата. Оба ведут к красивой и полезной выпечке.
+          </p>
+        </div>
+
+        <div class="courses">
+          <article class="course">
+            <div class="course-tag">Для особого питания</div>
+            <h3>Курс «Gluten Free»</h3>
             <p>
-              Асия печёт хлеб с уважением к домашнему труду, чистым ингредиентам и спокойной эстетике.
-              Это тёплый, женственный проект, в котором каждая буханка делается бережно.
+              Подойдёт тем, кто хочет освоить безглютеновую выпечку без потери вкуса,
+              текстуры и эстетики хлеба.
             </p>
+            <ul>
+              <li>понятный путь к безглютеновому хлебу</li>
+              <li>вкусная и красивая выпечка без ощущения ограничений</li>
+              <li>мягкая подача материала для начинающих</li>
+            </ul>
+            <div class="course-footer">
+              <span class="course-note">Запись через WhatsApp</span>
+              <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Gluten%20Free." target="_blank" rel="noopener noreferrer">
+                Хочу Gluten Free
+              </a>
+            </div>
+          </article>
+
+          <article class="course">
+            <div class="course-tag">Для ценителей итальянской закваски</div>
+            <h3>Курс «Левито Мадре»</h3>
             <p>
-              Такой сайт подойдёт как красивая визитка, мини-каталог и страница для заказов
-              через WhatsApp, Telegram или Instagram.
+              Подойдёт тем, кто хочет работать с мягкой итальянской закваской
+              и получать особенно красивый, деликатный хлеб.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="products">
-      <div class="container">
-        <div class="section-title">
-          <span>Ассортимент</span>
-          <h2>Хлеб, который красиво смотрится и на столе, и на фото</h2>
-          <p>
-            Ниже пример карточек. Названия, цены и описания потом легко заменить на свои.
-          </p>
-        </div>
-
-        <div class="products">
-          <article class="product">
-            <div class="product-media">
-              <div class="mini-olive left"></div>
-              <div class="mini-olive right"></div>
-              <div class="mini-bread"></div>
-            </div>
-            <div class="product-body">
-              <h3>Классический пшеничный</h3>
-              <p>
-                Нежный мякиш, красивая корочка и универсальный вкус на каждый день.
-              </p>
-              <div class="price-row">
-                <div class="price">от 250 ₽</div>
-                <a href="#contact" class="btn btn-secondary">Заказать</a>
-              </div>
+            <ul>
+              <li>понимание работы с Левито Мадре</li>
+              <li>мягкий, ароматный и эстетичный результат</li>
+              <li>уверенность в процессе и повторяемость результата</li>
+            </ul>
+            <div class="course-footer">
+              <span class="course-note">Запись через WhatsApp</span>
+              <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20курс%20Левито%20Мадре." target="_blank" rel="noopener noreferrer">
+                Хочу Левито Мадре
+              </a>
             </div>
           </article>
-
-          <article class="product">
-            <div class="product-media">
-              <div class="mini-bread" style="aspect-ratio: 1.15/1; border-radius: 50% 50% 46% 54% / 42% 42% 58% 58%;"></div>
-            </div>
-            <div class="product-body">
-              <h3>Цельнозерновой</h3>
-              <p>
-                Более насыщенный вкус и тёплый, домашний характер с приятной текстурой.
-              </p>
-              <div class="price-row">
-                <div class="price">от 290 ₽</div>
-                <a href="#contact" class="btn btn-secondary">Заказать</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product">
-            <div class="product-media">
-              <div class="mini-bread" style="aspect-ratio: 1.35/0.92; border-radius: 48% 52% 42% 58% / 36% 36% 64% 64%;"></div>
-            </div>
-            <div class="product-body">
-              <h3>С семенами</h3>
-              <p>
-                Ароматный хлеб с красивой корочкой, который особенно хорош к завтраку и супам.
-              </p>
-              <div class="price-row">
-                <div class="price">от 320 ₽</div>
-                <a href="#contact" class="btn btn-secondary">Заказать</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="process">
-      <div class="container">
-        <div class="section-title">
-          <span>Как готовим</span>
-          <h2>Простой и честный процесс</h2>
-          <p>
-            Без спешки и лишнего — только то, что действительно нужно хорошему хлебу.
-          </p>
-        </div>
-
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">01</div>
-            <h3>Закваска</h3>
-            <p>Подготавливается живая основа для будущего хлеба.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">02</div>
-            <h3>Замес</h3>
-            <p>Мука, вода, соль и закваска соединяются в тесто нужной текстуры.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">03</div>
-            <h3>Брожение</h3>
-            <p>Тесто медленно раскрывает свой вкус, аромат и внутреннюю структуру.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-num">04</div>
-            <h3>Выпечка</h3>
-            <p>Буханка получает золотистую корочку и тёплый домашний аромат.</p>
-          </div>
-        </div>
-
-        <div class="quote">
-          <p>
-            «Хлеб — это простая еда, но когда он сделан с вниманием, он становится частью уюта дома».
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="container">
-        <div class="section-title">
-          <span>Заказ</span>
-          <h2>Связаться с Асией</h2>
-          <p>
-            Здесь можно оставить заявку. Позже форму можно подключить к WhatsApp, Telegram или почте.
-          </p>
-        </div>
-
-        <div class="contact-grid">
-          <div class="card">
-            <h3>Контакты</h3>
-
-            <div class="contact-item">
-              <strong>Имя</strong>
-              <span>Асия</span>
-            </div>
-
-            <div class="contact-item">
-              <strong>Телефон</strong>
-              <a href="tel:+79990000000">+7 (999) 000-00-00</a>
-            </div>
-
-            <div class="contact-item">
-              <strong>WhatsApp</strong>
-              <a href="https://wa.me/79990000000" target="_blank" rel="noopener noreferrer">Написать в WhatsApp</a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Instagram</strong>
-              <a href="#" target="_blank" rel="noopener noreferrer">@asiya.bread</a>
-            </div>
-
-            <div class="contact-item">
-              <strong>Город</strong>
-              <span>Укажи свой город</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3>Оставить заявку</h3>
-
-            <form id="orderForm">
-              <div class="field">
-                <label for="name">Ваше имя</label>
-                <input id="name" name="name" type="text" placeholder="Например: Хеда" required />
-              </div>
-
-              <div class="field">
-                <label for="phone">Телефон или WhatsApp</label>
-                <input id="phone" name="phone" type="text" placeholder="+7..." required />
-              </div>
-
-              <div class="field">
-                <label for="order">Что хотите заказать</label>
-                <textarea id="order" name="order" placeholder="Например: 2 пшеничных хлеба и 1 цельнозерновой" required></textarea>
-              </div>
-
-              <div class="form-note">
-                Сейчас форма просто показывает сообщение на сайте. Реальную отправку можно подключить позже.
-              </div>
-
-              <button class="btn btn-primary" type="submit">Отправить заявку</button>
-              <div class="success" id="successMessage">
-                Спасибо. Ваша заявка сохранена. Теперь можно подключить отправку в WhatsApp или Telegram.
-              </div>
-            </form>
-          </div>
         </div>
       </div>
     </section>
 
     <section>
       <div class="container">
+        <div class="result-box">
+          <p>
+            Со мной вы приходите не просто к рецептам, а к состоянию,
+            в котором хлеб дома становится нормой: красивый, полезный,
+            ароматный и сделанный вашими руками.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="container">
         <div class="section-title">
           <span>Вопросы</span>
-          <h2>Часто спрашивают</h2>
+          <h2>Что чаще всего спрашивают</h2>
         </div>
 
         <div class="faq">
           <details>
-            <summary>Чем хлеб на закваске отличается от обычного?</summary>
+            <summary>Я новичок. У меня получится?</summary>
             <p>
-              Он готовится дольше и естественнее. За счёт этого вкус глубже, а аромат мягче и богаче.
+              Да. Курсы подойдут и тем, кто только начинает. Материал строится так,
+              чтобы вы не тонули в сложностях, а шли шаг за шагом к понятному результату.
             </p>
           </details>
 
           <details>
-            <summary>Можно ли заказать хлеб заранее?</summary>
+            <summary>Подходит ли это для дома, если у меня семья и мало времени?</summary>
             <p>
-              Да, это удобно, потому что так можно спокойно запланировать выпечку и подготовить хлеб к нужному дню.
+              Да. Именно поэтому мой подход удобен для обычной жизни. Он не про идеальные лабораторные условия,
+              а про реальный хлеб дома.
             </p>
           </details>
 
           <details>
-            <summary>Можно ли менять состав?</summary>
+            <summary>Можно ли потом зарабатывать на выпечке?</summary>
             <p>
-              Да, можно обсудить размер буханки, вид муки и некоторые добавки.
+              Да, многие ученицы пришли не только к домашнему хлебу, но и к хлебному ремеслу как к источнику дохода.
             </p>
           </details>
         </div>
       </div>
     </section>
+
+    <section class="cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Готовы начать свой путь?</h2>
+          <p>
+            Напишите мне в WhatsApp, и я помогу выбрать курс, который подойдёт именно вам.
+          </p>
+
+          <div class="cta-actions">
+            <a class="btn btn-primary" href="https://wa.me/79375398225?text=Здравствуйте!%20Хочу%20подобрать%20подходящий%20курс." target="_blank" rel="noopener noreferrer">
+              Написать в WhatsApp
+            </a>
+            <a class="btn btn-secondary" href="#top">
+              Наверх
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
     <div class="container footer-row">
       <div>© 2026 Асия — хлеб на закваске</div>
-      <div>Нежный сайт в светлой оливково-хлебной палитре</div>
+      <div>WhatsApp: +7 937 539-82-25</div>
     </div>
   </footer>
 
   <script>
     const mobileToggle = document.getElementById('mobileToggle');
     const menuWrap = document.getElementById('menuWrap');
-    const form = document.getElementById('orderForm');
-    const successMessage = document.getElementById('successMessage');
 
     mobileToggle.addEventListener('click', () => {
       menuWrap.classList.toggle('open');
-    });
-
-    form.addEventListener('submit', function(e){
-      e.preventDefault();
-      successMessage.style.display = 'block';
-      form.reset();
     });
   </script>
 </body>
